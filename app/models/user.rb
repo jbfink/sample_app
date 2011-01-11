@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
 	    :uniqueness => { :case_sensitive => false }
  #automatically create the virtual attribute 'password confirmation'.
   validates :password, :presence => true,
-                       :confirmation => true
+                       :confirmation => true,
                        :length => { :within => 6..40 }
 
 end
